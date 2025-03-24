@@ -1,0 +1,306 @@
+/* styles.css */
+body {
+    background-color: #C72D67;
+    color: white;
+    font-family: Luckiest Guy;
+    text-align: center;
+    margin: 0px;
+    padding: 0;
+    height: 450px;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    
+}
+.header button {
+    background-color: white;
+    color: #C72D67;
+    font-weight: bold;
+    width: 152px;
+    height: 58px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.header button:hover {
+    background-color: #eee;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+.search-bar button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.content {
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.hero {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Change center en flex-start */
+    text-align: left; 
+    padding: 20px 50px;
+    gap: 20px; /* Ajoute un espace entre le texte et l'assiette */
+    height: 600px;
+}
+.hero-content {
+    max-width: 2000px;
+    text-align: left; /* Assure que le texte reste bien aligné à gauche */
+    margin-top: 250px;
+}
+
+.hero-img{
+    position: absolute;
+    top: 210px;
+    left: 220px;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 300px; 
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin: 50px;
+}
+
+h1 {
+    font-family: Luckiest Guy;
+    color: #ffffff;
+    font-size: 115px;
+    font-weight: 300;
+    line-height: 70px;
+    letter-spacing: 3%;
+    margin-bottom: 20px; /* Réduit l’espace sous "ALIMIO," */
+}
+
+#para_h1{
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 65px;
+    letter-spacing: 3%;
+    margin-top: 0;
+
+}
+
+#h1_desc{
+    font-family: Luckiest Guy;
+    color: #5CC115;
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+}
+
+#h1_team{
+    font-family: Luckiest Guy;
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+}
+
+h2 {
+    font-family: Luckiest Guy;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+h3 {
+    font-family: Luckiest Guy;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+}
+
+#h3_Green{
+    font-family: Luckiest Guy;
+    color: #5CC115;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 50px;
+}
+
+#p_desc {
+    font-family: Arial;
+    font-weight: 300;
+    color: #0B820A;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 50px;
+    text-align: left;
+}
+
+#p_descIMG{
+    font-family: Arial;
+    font-weight: 300;
+    color: #0B820A;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 50px;
+    text-align: left;
+    max-width: 1100px;
+} 
+
+#para_Assiette {
+    font-family: Luckiest Guy;
+    font-weight: 50;
+    color: #5CC115;
+    font-size: 25px;
+    line-height: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+
+#para_header{
+    font-family: Luckiest Guy;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+
+
+}
+
+.description {
+    background-color: #ffffff;
+    padding: 10px 10px;
+    height: 750px;
+}
+
+.dec-img{
+    position: absolute;
+    top: 1500px;
+    right: 1px;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px; 
+}
+
+.team {
+    background-color: #5CC115;
+    padding: 50px 100px;
+    height: 700px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.polaroid {
+    background: white;
+    width: 250px; 
+    height: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.polaroid img {
+    height: 200px;
+    object-fit: cover; 
+}
+
+.polaroid .caption {
+    font-family: Luckiest Guy;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #40870F; 
+}
+
+.polaroid .subtext {
+    font-family: Luckiest Guy;
+    font-size: 14px;
+    color: #5CC115;
+    ; 
+}
+
+.polaroid .square {
+    width  : 250px;
+    height : 200px;
+    border-radius: 5px;
+    background : #5CC115;
+}
+
+.assiette {
+    position: absolute;
+    width: 348px;
+    height: 348px;
+    right: 10%; 
+    top: 310px;
+    transform: translateY(-50%); /* Ajustement vertical uniquement */
+    border: 0.4cm solid #ffffff;
+
+    background: #F8F1F5;
+    box-shadow: inset 0px 4px 4px rgba(39, 39, 66, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #272742;
+}
+
+.hover-text {
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

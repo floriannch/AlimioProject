@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Recherche - Alimio</title>
+
+        <link rel="stylesheet" href="/css/styleSearch.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        
+        <script src="/js/scriptSearch.js" defer></script>
+
+    </head>
+
+    <header class="header">
+        <button onclick="location.href='/'">ACCUEIL</button>
+        <button onclick="location.href='/favoris'">FAVORIS</button>
+        <p id="para_header">ALIMIO</p>
+        <button onclick="location.href='/html/apropos.html'">A PROPOS</button>
+        <button onclick="location.href='/html/contacts.html'">CONTACTS</button>
+    </header>
+
+    <body>
+        <section class = 'search-container'>
+            <form action="/recherche" method="get">
+                <input class="searchBar" type="text" name="query" placeholder="Entrez le nom d'un produit"/>
+                <button class="searchButton" type="submit">Rechercher</button>
+            </form>
+        </section>
+
+        <div class="main-container">
+            <section class="filters">
+                <h1 class="h1-title">FILTRES :</h1>
+                <article>
+                    <h2 class="h2-title">NUTRI-SCORE</h2>
+                    <label><input type="checkbox" class="filter-box" name="nutriscore" value="A"> A</label><br>
+                    <label><input type="checkbox" class="filter-box" name="nutriscore" value="B"> B</label><br>
+                    <label><input type="checkbox" class="filter-box" name="nutriscore" value="C"> C</label><br>
+                    <label><input type="checkbox" class="filter-box" name="nutriscore" value="D"> D</label><br>
+                    <label><input type="checkbox" class="filter-box" name="nutriscore" value="E"> E</label><br> 
+                </article>     
+
+                <article>
+                    <h2 class="h2-title">SANS ALLERGÈNES</h2>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="ARACHIDE">ARACHIDE</label><br> 
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="CELERI">CELERI</label><br> 
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="CRUSTACE">CRUSTACES</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="GLUTEN">GLUTEN</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="FRUITS A COQUE">FRUITS A COQUE</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="LAIT">LAIT</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="LUPIN">LUPIN</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="OEUF">OEUF</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="POISSON">POISSON</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="MOLLUSQUE">MOLLUSQUE</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="MOUTARDE">MOUTARDE</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="SESAME">SESAME</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="SOJA">SOJA</label><br>
+                    <label><input type="checkbox" class="filter-box" name="allergen" value="SULFITE">SULFITE</label><br>
+                </article>
+            </section>
+            <section id="products">
+                <div th:each="product : ${products}" class="product-item">
+                    <img th:src="${product.aImage}" class="product-Image"/>
+                    <h2 class="product-title"th:text="${product.aName}"></h2>
+                    <input type="checkbox" class="favorite-checkbox" th:value="${product.aBarCode}" 
+                    onchange="toggleFavorite(this.value)">
+                    <div class="nutriscore" th:data-score="${product.aNutriScore}" th:text="${product.aNutriScore}"></div>
+                </div>
+            </section> 
+        </div>           
+    </body>
+</html>

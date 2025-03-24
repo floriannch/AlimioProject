@@ -1,0 +1,322 @@
+@font-face {
+    font-family:'LuckiestGuy';
+    src: url(LuckiestGuy.ttf);
+}
+
+@font-face {
+    font-family: 'Mallanna';
+    src : url(Mallanna-Regular.ttf);
+}
+
+.logo {
+    font-family: Luckiest Guy;
+    color: #ffffff;
+    font-size: 180px;
+    font-weight: 300;
+    line-height: 70px;
+    letter-spacing: 3%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    
+}
+.header button {
+    background-color: white;
+    color: #C72D67;
+    font-weight: bold;
+    width: 152px;
+    height: 58px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.header button:hover {
+    background-color: #eee;
+}
+
+.header button:active {
+    transform: scale(0.98);
+}
+
+#para_header{
+    font-family: Luckiest Guy;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+}
+
+.searchBar {
+    width: 500px; /* Largeur de la barre de recherche */
+    height: 70px; /* Hauteur du champ */
+    border: 5px solid white; /* Bordure blanche */
+    border-radius: 30px; /* Coins arrondis */
+    color: #C72D67;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 20px; /* Ajoute du padding à gauche pour que le texte ne touche pas la bordure */
+    outline: none; /* Supprime le contour par défaut */
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    margin-top: 114px;
+}
+
+.searchBar:focus {
+    background-color: #f7f7f7; /* Légère variation de fond au focus */
+}
+
+.searchButton {
+    width: 150px;
+    height: 65px;
+    border: 5px solid white;
+    border-radius: 30px;
+    color: #C72D67;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 20px;
+    text-align: center;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.searchButton:active {
+    transform: scale(0.98);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+}
+
+body {
+    background-color: #C72D67;
+}
+
+.h1-title {
+    color: #40870F;
+    font-family: LuckiestGuy;
+    font-size: 20px;
+    letter-spacing: 1.7px;
+}
+
+.h2-title {
+    color: #870F57;
+    font-family: LuckiestGuy;
+    font-size: 16px;
+    letter-spacing: 1.7px;
+}
+
+.filters {
+    color:  #870F57;
+    background-color: #F8F1F5;
+    font-family: Mallanna;
+    font-size: 13px;
+    display: block;
+    flex-direction: column; /* Ajouté : pour aligner verticalement */
+    align-items: flex-start; /* Ajouté : pour aligner à gauche */
+    width: 229px;
+    height: auto;
+    border: 2px solid;
+    border-color: #40870F;
+    border-radius: 3px;
+    margin-left: 50px;
+    margin-right: 31px;
+    padding-left: 24px;
+    padding-top: 4px;
+    flex: 0 0 250px;
+    overflow: auto;
+    top: 163px;  /* Align with the top of the search bar */
+}
+
+label {
+    display: flex; /* Flexbox pour aligner checkbox et texte sur la même ligne */
+    align-items: center; /* Centrer verticalement la checkbox et le texte */
+    gap: 8px;}
+
+.filter-box {
+    height: 20px;
+    width: 20px;
+    border: 2px solid;
+    appearance: none;
+    background-color: #F8F1F5;
+    border-color: #40870F;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+.filter-box:checked {
+    background-color: #40870F;
+}
+
+.produit {
+    border: 2px solid;
+    border-color: #C72D67;
+    width: 200px;
+    height: 253px;
+    border-radius: 2.5px;
+}
+
+p {
+    color: #C72D67;
+    font-family: Mallanna;
+    font-size: 12px; 
+}
+
+.main-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 900px;
+    flex-grow: 1;
+}
+
+
+.product-item {
+    width: 100%; /* S'adapte à la colonne */
+    max-width: 250px; /* Largeur max */
+    height: 300px;;
+    border: 2px solid #C72D67;
+    border-radius: 5px;
+    background-color: #F8F1F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* ✅ Espacement automatique */
+    padding: 15px;
+    position: relative; /* ✅ Nécessaire pour le positionnement des enfants */
+}
+
+/* Style de l'image */
+.product-Image {
+    margin-top: 15px;
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* ✅ Assurer que le titre reste centré et bien positionné */
+.product-title {
+    font-family: 'LuckiestGuy', sans-serif;
+    font-size: 19px;
+    color: #C72D67;
+    text-align: center;
+    max-width: 90%;
+    padding-bottom: 40px;
+}
+
+
+/* ✅ Positionner correctement la checkbox favoris */
+.favorite-checkbox {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Style de l'image */
+.product-Image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+
+/* Titre des produits */
+.product-title {
+    font-family: 'LuckiestGuy', sans-serif;
+    font-size: 19px;
+    color: #C72D67;
+    text-align: center;
+}
+
+.favorite-checkbox {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.favorite-checkbox::before {
+    content: "❤";
+    font-size: 30px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.favorite-checkbox:checked::before {
+    color: #C72D67;
+}
+
+.nutriscore {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'LuckiestGuy', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nutriscore[data-score="a"]{
+    background-color: #40870F
+}
+.nutriscore[data-score="b"] {
+    background-color: #5CC115
+}
+.nutriscore[data-score="c"] {
+    background-color: #EAE864
+}
+.nutriscore[data-score="d"] {
+    background-color: #F28E36
+}
+.nutriscore[data-score="e"] {
+    background-color: #F82E34
+}
+
+

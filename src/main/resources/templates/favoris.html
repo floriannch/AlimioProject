@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favoris - Alimio</title>
+        <link rel="stylesheet" href="/css/StylesFavoris.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <script src="/js/scriptFavoris.js" defer></script>
+    </head>
+
+    <header class="header">
+        <button onclick="location.href='/'">ACCUEIL</button>
+        <button onclick="location.href='/favoris'">FAVORIS</button>
+        <p id="para_header">ALIMIO</p>
+        <button onclick="location.href='/html/apropos.html'">A PROPOS</button>
+        <button onclick="location.href='/html/contacts.html'">CONTACTS</button>
+    </header>
+
+    
+
+    <body onload="loadFavorites()">
+        <h1>Mes Favoris</h1>
+        <section id = "results">
+            <!-- Afficher un message si aucun favori n'est trouvé -->
+            <div th:if="${favorites.empty}">
+                <h2 class="product-title">Aucun favori pour le moment.</h2>
+            </div>
+            <section id="products">
+                <!-- Afficher la liste des produits favoris -->
+                <div th:each="product : ${favorites}" class="product-item">
+                    <img th:src="${product.aImage}" class="product-Image" alt="Image du produit"/>
+                    <h2 class="product-title" th:text="${product.aName}"></h2>
+                    <!-- <p class="ingredients" th:text="${product.aIngredients}"></p> -->
+                <div class="nutriscore" th:data-score="${product.aNutriScore}" th:text="${product.aNutriScore}"></div>
+                    <input type="checkbox" class="favorite-checkbox" th:value="${product.aBarCode}" onchange="toggleFavorite(this.value)">
+                </div>
+            </section>
+        </section>
+    </body>
+</html>

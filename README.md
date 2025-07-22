@@ -24,7 +24,7 @@ Before you begin, ensure you have the following installed:
 
 ### Installation and Running the Application
 
-1.  **Clone the repository:**
+1.  **Clone the repository**
 2.  **Navigate to the project directory:**
     ```sh
     cd AlimioProject
